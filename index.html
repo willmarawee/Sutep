@@ -3,7 +3,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Centered Appa Tree</title>
+  <title>Appa's Tree with Split Descendants</title>
   <script src="vis-network.min.js"></script>
   <style>
     #mynetwork {
@@ -14,10 +14,10 @@
   </style>
 </head>
 <body>
-<h2 style="text-align:center;">Appa at the Center Tree</h2>
+<h2 style="text-align:center;">Appa Centered | Ameh's Kids Left | Wife2's Kids Right</h2>
 <div id="mynetwork"></div>
 <script type="text/javascript">
-  var nodes = new vis.DataSet([{id: "Boo", label: "Boo", color: "lightgray", level: 2},{id: "Boong", label: "Boong", color: "lightgray", level: 2},{id: "Eaow Sae-Tung", label: "Eaow Sae-Tung", color: "lightblue", level: 2},{id: "Imm", label: "Imm", color: "lightgray", level: 2},{id: "Jeng", label: "Jeng", color: "lightgray", level: 2},{id: "Lek", label: "Lek", color: "lightgray", level: 2},{id: "Liang", label: "Liang", color: "lightgray", level: 2},{id: "Luk", label: "Luk", color: "lightgray", level: 2},{id: "Meng", label: "Meng", color: "lightgray", level: 2},{id: "Nid", label: "Nid", color: "lightgray", level: 2},{id: "Ong", label: "Ong", color: "lightgray", level: 2},{id: "Sha", label: "Sha", color: "lightgray", level: 2},{id: "Siw", label: "Siw", color: "lightgray", level: 2},{id: "Su Kim \u201cAhmeh\u201d Sae-ngow", label: "Su Kim \u201cAhmeh\u201d Sae-ngow", color: "lightgray", level: 0},{id: "Sutep \u201cAppa\u201d Tessalee", label: "Sutep \u201cAppa\u201d Tessalee", color: "lightgray", level: 0},{id: "__ameh_kids_anchor", label: , color: "#FFFFFF00", level: 1},{id: "__wife2", label: , color: "#FFFFFF00", level: 0},{id: "__wife2_kids_anchor", label: , color: "#FFFFFF00", level: 1}]);
+  var nodes = new vis.DataSet([{id: "Boo", label: "Boo", color: "lightgray", level: 3},{id: "Boong", label: "Boong", color: "lightgray", level: 3},{id: "Eaow Sae-Tung", label: "Eaow Sae-Tung", color: "lightblue", level: 3},{id: "Imm", label: "Imm", color: "lightgray", level: 3},{id: "Jeng", label: "Jeng", color: "lightgray", level: 3},{id: "Lek", label: "Lek", color: "lightgray", level: 3},{id: "Liang", label: "Liang", color: "lightgray", level: 3},{id: "Luk", label: "Luk", color: "lightgray", level: 3},{id: "Meng", label: "Meng", color: "lightgray", level: 3},{id: "Nid", label: "Nid", color: "lightgray", level: 3},{id: "Ong", label: "Ong", color: "lightgray", level: 3},{id: "Sha", label: "Sha", color: "lightgray", level: 3},{id: "Siw", label: "Siw", color: "lightgray", level: 3},{id: "Su Kim \u201cAhmeh\u201d Sae-ngow", label: "Su Kim \u201cAhmeh\u201d Sae-ngow", color: "lightgray", level: 1, x: -300},{id: "Sutep \u201cAppa\u201d Tessalee", label: "Sutep \u201cAppa\u201d Tessalee", color: "lightgray", level: 0, x: 0},{id: "__ameh_kids_anchor", label: , color: "#FFFFFF00", level: 2, x: -300},{id: "__wife2", label: , color: "#FFFFFF00", level: 1, x: 300},{id: "__wife2_kids_anchor", label: , color: "#FFFFFF00", level: 2, x: 300}]);
   var edges = new vis.DataSet([{from: "Sutep \u201cAppa\u201d Tessalee", to: "Su Kim \u201cAhmeh\u201d Sae-ngow"},{from: "Sutep \u201cAppa\u201d Tessalee", to: "__wife2"},{from: "Sutep \u201cAppa\u201d Tessalee", to: "__ameh_kids_anchor"},{from: "Su Kim \u201cAhmeh\u201d Sae-ngow", to: "__ameh_kids_anchor"},{from: "Sutep \u201cAppa\u201d Tessalee", to: "__wife2_kids_anchor"},{from: "__wife2", to: "__wife2_kids_anchor"},{from: "__ameh_kids_anchor", to: "Imm"},{from: "__ameh_kids_anchor", to: "Siw"},{from: "__ameh_kids_anchor", to: "Eaow Sae-Tung"},{from: "__ameh_kids_anchor", to: "Luk"},{from: "__ameh_kids_anchor", to: "Meng"},{from: "__ameh_kids_anchor", to: "Liang"},{from: "__ameh_kids_anchor", to: "Jeng"},{from: "__ameh_kids_anchor", to: "Lek"},{from: "__ameh_kids_anchor", to: "Nid"},{from: "__ameh_kids_anchor", to: "Ong"},{from: "__wife2_kids_anchor", to: "Sha"},{from: "__wife2_kids_anchor", to: "Boo"},{from: "__wife2_kids_anchor", to: "Boong"}]);
 
   var container = document.getElementById('mynetwork');
