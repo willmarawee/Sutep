@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Family Tree - Minimal</title>
+  <script src="https://cdn.jsdelivr.net/npm/vis-network/standalone/umd/vis-network.min.js"></script>
+  <style>
+    #mynetwork {
+      width: 100%;
+      height: 100vh;
+      border: 1px solid lightgray;
+    }
+  </style>
+</head>
+<body>
+<h2 style="text-align:center;">Family Tree (Simplified)</h2>
+<div id="mynetwork"></div>
+<script type="text/javascript">
+  var nodes = new vis.DataSet([{id: "Father of Appa Sutep", label: "Father of Appa Sutep", color: "lightblue"},{id: "Mother of Appa Sutep", label: "Mother of Appa Sutep", color: "pink"},{id: "Mom of Ameh Sukim Sae-Ngow", label: "Mom of Ameh Sukim Sae-Ngow", color: "pink"},{id: "Father of Ameh Sukim Sae-Ngow", label: "Father of Ameh Sukim Sae-Ngow", color: "lightblue"},{id: "Sutep "Appa" Tessalee", label: "Sutep "Appa" Tessalee", color: "lightblue"},{id: "Su Kim "Ameh" Sae-ngow", label: "Su Kim "Ameh" Sae-ngow", color: "pink"},{id: "__wife2", label: "__wife2", color: "pink"},{id: "Siriporn "Imm" Tessalee", label: "Siriporn "Imm" Tessalee", color: "pink"},{id: "Sangtong "Nung"  ", label: "Sangtong "Nung"  ", color: "lightblue"},{id: "Patamawadee "Tan" Kaosaad ", label: "Patamawadee "Tan" Kaosaad ", color: "pink"},{id: "Suwit "Siw" Tessalee", label: "Suwit "Siw" Tessalee", color: "lightblue"},{id: "Suchada ", label: "Suchada ", color: "pink"},{id: "Eaow Sae-Tung", label: "Eaow Sae-Tung", color: "lightblue"},{id: "Pupa Tanthapanichkul ", label: "Pupa Tanthapanichkul ", color: "lightblue"},{id: "Sirirat "Luk" Tanthapanichkul ", label: "Sirirat "Luk" Tanthapanichkul ", color: "pink"},{id: "Pongthep "Sha" Tessalee", label: "Pongthep "Sha" Tessalee", color: "lightblue"},{id: "Manop "Meng" Tessalee", label: "Manop "Meng" Tessalee", color: "lightblue"},{id: "Nucharee "Nuch" Bunlengpaisit", label: "Nucharee "Nuch" Bunlengpaisit", color: "pink"},{id: "Somsak "Liang" Tessalee", label: "Somsak "Liang" Tessalee", color: "lightblue"},{id: "Orachon "Ammy" Tessalee", label: "Orachon "Ammy" Tessalee", color: "pink"}]);
+  var edges = new vis.DataSet([{from: "Father of Appa Sutep", to: "Sutep "Appa" Tessalee"},{from: "Mother of Appa Sutep", to: "Sutep "Appa" Tessalee"},{from: "Father of Ameh Sukim Sae-Ngow", to: "Su Kim "Ameh" Sae-ngow"},{from: "Mom of Ameh Sukim Sae-Ngow", to: "Su Kim "Ameh" Sae-ngow"},{from: "Sutep "Appa" Tessalee", to: "Siriporn "Imm" Tessalee"},{from: "Su Kim "Ameh" Sae-ngow", to: "Siriporn "Imm" Tessalee"},{from: "Sutep "Appa" Tessalee", to: "Suwit "Siw" Tessalee"},{from: "Su Kim "Ameh" Sae-ngow", to: "Suwit "Siw" Tessalee"},{from: "Sutep "Appa" Tessalee", to: "Eaow Sae-Tung"},{from: "Su Kim "Ameh" Sae-ngow", to: "Eaow Sae-Tung"},{from: "Sutep "Appa" Tessalee", to: "Sirirat "Luk" Tanthapanichkul "},{from: "Su Kim "Ameh" Sae-ngow", to: "Sirirat "Luk" Tanthapanichkul "},{from: "Sutep "Appa" Tessalee", to: "Pongthep "Sha" Tessalee"},{from: "__wife2", to: "Pongthep "Sha" Tessalee"},{from: "Sutep "Appa" Tessalee", to: "Manop "Meng" Tessalee"},{from: "Su Kim "Ameh" Sae-ngow", to: "Manop "Meng" Tessalee"},{from: "Sutep "Appa" Tessalee", to: "Somsak "Liang" Tessalee"},{from: "Su Kim "Ameh" Sae-ngow", to: "Somsak "Liang" Tessalee"},{from: "Manop "Meng" Tessalee", to: "Nucharee "Nuch" Bunlengpaisit", arrows:"none", dashes:true},{from: "Patamawadee "Tan" Kaosaad ", to: "Suwit "Siw" Tessalee", arrows:"none", dashes:true},{from: "Su Kim "Ameh" Sae-ngow", to: "Sutep "Appa" Tessalee", arrows:"none", dashes:true},{from: "Sangtong "Nung"  ", to: "Siriporn "Imm" Tessalee", arrows:"none", dashes:true},{from: "Orachon "Ammy" Tessalee", to: "Somsak "Liang" Tessalee", arrows:"none", dashes:true},{from: "Pupa Tanthapanichkul ", to: "Sirirat "Luk" Tanthapanichkul ", arrows:"none", dashes:true},{from: "Suchada ", to: "Suwit "Siw" Tessalee", arrows:"none", dashes:true},{from: "Sutep "Appa" Tessalee", to: "__wife2", arrows:"none", dashes:true}]);
+
+  var container = document.getElementById('mynetwork');
+  var data = { nodes: nodes, edges: edges };
+  var options = {
+    layout: {
+      hierarchical: {
+        direction: "UD",
+        sortMethod: "directed"
+      }
+    },
+    edges: {
+      arrows: {
+        to: {enabled: true}
+      }
+    },
+    physics: false
+  };
+  new vis.Network(container, data, options);
+</script>
+</body>
+</html>
