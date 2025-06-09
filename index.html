@@ -3,7 +3,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Appa's Family Tree (Corrected)</title>
+  <title>Appa's Descendant Tree with Spouses</title>
   <script src="vis-network.min.js"></script>
   <style>
     #mynetwork {
@@ -14,11 +14,11 @@
   </style>
 </head>
 <body>
-<h2 style="text-align:center;">Appa's Descendant Tree (Corrected: 'Nid')</h2>
+<h2 style="text-align:center;">Appa's Descendant Tree (Spouses + Generational Clarity)</h2>
 <div id="mynetwork"></div>
 <script type="text/javascript">
-  var nodes = new vis.DataSet([{id: "Jeng", label: "Jeng", color: "lightgray", level: 1},{id: "Liang", label: "Liang", color: "lightgray", level: 1},{id: "Sutep \u201cAppa\u201d Tessalee", label: "Sutep \u201cAppa\u201d Tessalee", color: "lightgray", level: 0},{id: "Meng", label: "Meng", color: "lightgray", level: 1},{id: "Boo", label: "Boo", color: "lightgray", level: 1},{id: "Nid", label: "Nid", color: "lightgray", level: 1},{id: "Sutep \"Appa\" Tessalee", label: "Sutep \"Appa\" Tessalee", color: "lightblue", level: 0},{id: "Eaow Sae-Tung", label: "Eaow Sae-Tung", color: "lightblue", level: 1},{id: "Luk", label: "Luk", color: "lightgray", level: 1},{id: "__wife2", label: "__wife2", color: "pink", level: 0},{id: "Su Kim \"Ameh\" Sae-ngow", label: "Su Kim \"Ameh\" Sae-ngow", color: "pink", level: 0},{id: "Siw", label: "Siw", color: "lightgray", level: 1},{id: "Boong", label: "Boong", color: "lightgray", level: 1},{id: "Sha", label: "Sha", color: "lightgray", level: 1},{id: "Lek", label: "Lek", color: "lightgray", level: 1},{id: "Ong", label: "Ong", color: "lightgray", level: 1},{id: "Imm", label: "Imm", color: "lightgray", level: 1},{id: "Su Kim \u201cAhmeh\u201d Sae-ngow", label: "Su Kim \u201cAhmeh\u201d Sae-ngow", color: "lightgray", level: 0}]);
-  var edges = new vis.DataSet([{from: "Sutep \u201cAppa\u201d Tessalee", to: "Imm"},{from: "Su Kim \u201cAhmeh\u201d Sae-ngow", to: "Imm"},{from: "Sutep \u201cAppa\u201d Tessalee", to: "Siw"},{from: "Su Kim \u201cAhmeh\u201d Sae-ngow", to: "Siw"},{from: "Sutep \u201cAppa\u201d Tessalee", to: "Eaow Sae-Tung"},{from: "Su Kim \u201cAhmeh\u201d Sae-ngow", to: "Eaow Sae-Tung"},{from: "Sutep \u201cAppa\u201d Tessalee", to: "Luk"},{from: "Su Kim \u201cAhmeh\u201d Sae-ngow", to: "Luk"},{from: "Sutep \u201cAppa\u201d Tessalee", to: "Meng"},{from: "Su Kim \u201cAhmeh\u201d Sae-ngow", to: "Meng"},{from: "Sutep \u201cAppa\u201d Tessalee", to: "Liang"},{from: "Su Kim \u201cAhmeh\u201d Sae-ngow", to: "Liang"},{from: "Sutep \u201cAppa\u201d Tessalee", to: "Jeng"},{from: "Su Kim \u201cAhmeh\u201d Sae-ngow", to: "Jeng"},{from: "Sutep \u201cAppa\u201d Tessalee", to: "Lek"},{from: "Su Kim \u201cAhmeh\u201d Sae-ngow", to: "Lek"},{from: "Sutep \u201cAppa\u201d Tessalee", to: "Nid"},{from: "Su Kim \u201cAhmeh\u201d Sae-ngow", to: "Nid"},{from: "Sutep \u201cAppa\u201d Tessalee", to: "Ong"},{from: "Su Kim \u201cAhmeh\u201d Sae-ngow", to: "Ong"},{from: "Sutep \u201cAppa\u201d Tessalee", to: "Sha"},{from: "__wife2", to: "Sha"},{from: "Sutep \u201cAppa\u201d Tessalee", to: "Boo"},{from: "__wife2", to: "Boo"},{from: "Sutep \u201cAppa\u201d Tessalee", to: "Boong"},{from: "__wife2", to: "Boong"},{from: "Sutep \"Appa\" Tessalee", to: "Eaow Sae-Tung"},{from: "Su Kim \"Ameh\" Sae-ngow", to: "Eaow Sae-Tung"},{from: "Sutep \u201cAppa\u201d Tessalee", to: "Su Kim \u201cAhmeh\u201d Sae-ngow", arrows:"none", dashes:true},{from: "Sutep \u201cAppa\u201d Tessalee", to: "__wife2", arrows:"none", dashes:true}]);
+  var nodes = new vis.DataSet([{id: "Boo", label: "Boo", color: "lightgray", level: 1},{id: "Boong", label: "Boong", color: "lightgray", level: 1},{id: "Eaow Sae-Tung", label: "Eaow Sae-Tung", color: "lightblue", level: 1},{id: "Imm", label: "Imm", color: "lightgray", level: 1},{id: "Jeng", label: "Jeng", color: "lightgray", level: 1},{id: "Lek", label: "Lek", color: "lightgray", level: 1},{id: "Liang", label: "Liang", color: "lightgray", level: 1},{id: "Luk", label: "Luk", color: "lightgray", level: 1},{id: "Meng", label: "Meng", color: "lightgray", level: 1},{id: "Nid", label: "Nid", color: "lightgray", level: 1},{id: "Ong", label: "Ong", color: "lightgray", level: 1},{id: "Sha", label: "Sha", color: "lightgray", level: 1},{id: "Siw", label: "Siw", color: "lightgray", level: 1},{id: "Su Kim \u201cAhmeh\u201d Sae-ngow", label: "Su Kim \u201cAhmeh\u201d Sae-ngow", color: "lightgray", level: 0},{id: "Sutep \u201cAppa\u201d Tessalee", label: "Sutep \u201cAppa\u201d Tessalee", color: "lightgray", level: 0},{id: "__wife2", label: "__wife2", color: "pink", level: 0}]);
+  var edges = new vis.DataSet([{from: "Sutep \u201cAppa\u201d Tessalee", to: "Imm"},{from: "Su Kim \u201cAhmeh\u201d Sae-ngow", to: "Imm"},{from: "Sutep \u201cAppa\u201d Tessalee", to: "Siw"},{from: "Su Kim \u201cAhmeh\u201d Sae-ngow", to: "Siw"},{from: "Sutep \u201cAppa\u201d Tessalee", to: "Eaow Sae-Tung"},{from: "Su Kim \u201cAhmeh\u201d Sae-ngow", to: "Eaow Sae-Tung"},{from: "Sutep \u201cAppa\u201d Tessalee", to: "Luk"},{from: "Su Kim \u201cAhmeh\u201d Sae-ngow", to: "Luk"},{from: "Sutep \u201cAppa\u201d Tessalee", to: "Meng"},{from: "Su Kim \u201cAhmeh\u201d Sae-ngow", to: "Meng"},{from: "Sutep \u201cAppa\u201d Tessalee", to: "Liang"},{from: "Su Kim \u201cAhmeh\u201d Sae-ngow", to: "Liang"},{from: "Sutep \u201cAppa\u201d Tessalee", to: "Jeng"},{from: "Su Kim \u201cAhmeh\u201d Sae-ngow", to: "Jeng"},{from: "Sutep \u201cAppa\u201d Tessalee", to: "Lek"},{from: "Su Kim \u201cAhmeh\u201d Sae-ngow", to: "Lek"},{from: "Sutep \u201cAppa\u201d Tessalee", to: "Nid"},{from: "Su Kim \u201cAhmeh\u201d Sae-ngow", to: "Nid"},{from: "Sutep \u201cAppa\u201d Tessalee", to: "Ong"},{from: "Su Kim \u201cAhmeh\u201d Sae-ngow", to: "Ong"},{from: "Sutep \u201cAppa\u201d Tessalee", to: "Sha"},{from: "__wife2", to: "Sha"},{from: "Sutep \u201cAppa\u201d Tessalee", to: "Boo"},{from: "__wife2", to: "Boo"},{from: "Sutep \u201cAppa\u201d Tessalee", to: "Boong"},{from: "__wife2", to: "Boong"},{from: "Sutep \u201cAppa\u201d Tessalee", to: "Su Kim \u201cAhmeh\u201d Sae-ngow", arrows:"none", dashes:true},{from: "Sutep \u201cAppa\u201d Tessalee", to: "__wife2", arrows:"none", dashes:true}]);
 
   var container = document.getElementById('mynetwork');
   var data = { nodes: nodes, edges: edges };
@@ -29,7 +29,7 @@
         direction: "UD",
         sortMethod: "directed",
         nodeSpacing: 250,
-        levelSeparation: 200
+        levelSeparation: 250
       }
     },
     edges: {
